@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% extends 'plantillapadre.html' %}
+    
 </head>
 <body>
-    hola mundo
+    {% block title %}Domys | registro{% endblock %}
+
+    {% block barranavegacion %}{% endblock %}
+
+    {% block bajobarra %}{% endblock %}
+
+    {% block secciontarjetas %}{% endblock %}
 </body>
 </html>
