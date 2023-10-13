@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "formularioregistro",
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,7 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             os.path.join(BASE_DIR, "domys/templates"),
+            os.path.join(BASE_DIR, "formularioregistro/templates")
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -125,6 +127,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "domys/static"),
+    os.path.join(BASE_DIR, "formularioregistro/static")
 ]
 
 # Default primary key field type
