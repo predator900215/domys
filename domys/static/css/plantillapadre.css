@@ -1,0 +1,63 @@
+/* Establece un z-index mayor para las tarjetas que el carrusel */
+.card {
+    position: relative;
+    z-index: 10;
+
+}
+
+/* Asegúrate de que las imágenes del carrusel sean transparentes */
+.carousel-item img {
+    filter: brightness(0.6);
+    width: 100%;
+    height: auto;
+    filter:brightness(0.7); /* Puedes ajustar la opacidad según tus preferencias */
+}
+
+/* También puedes ajustar el fondo del contenedor de las tarjetas si es necesario */
+.container.dentrocontenedortarjetas {
+    background: transparent; /* Fondo transparente para el contenedor de las tarjetas */
+    position: relative;
+    z-index: 0;
+    margin-top: -300px;
+}
+
+.container-fluid.fueracontenedortarjetas {
+  background:#451952;
+}
+
+/* Estilos para el formulario de ingreso */
+.formularioingreso {
+    width: 300px; /* Ancho máximo del formulario */
+    height:auto;
+    padding: 20px; /* Espaciado interno del formulario */
+}
+
+#correo{
+  width:100%;
+  margin-top:auto;
+  border-radius:5px;
+}
+
+#contrasena{
+  width:100%;
+  margin-top:20px;
+  border-radius:5px;
+}
+
+#mostrarcontrasena{
+  padding:30px;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+#ingresar{
+  width:100%;
+  height:40px;
+  background:#451952;
+  border-radius:5px;
+  margin-top:10px;
+}
+
+.quitarlinea{
+    text-decoration:none;
+}
