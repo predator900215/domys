@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% extends 'plantillapadre.html' %}
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/registrocliente.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <body>
-    {% block title %}Domys | registro{% endblock %}
-
-    {% block barranavegacion %}{% endblock %}
-
-    {% block bajobarra %}{% endblock %}
-
-    {% block secciontarjetas %}{% endblock %}
+    <main>
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'inicio' %}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
+            <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+          </a>               
+        </div>
+      </nav>
+      <div class="container-fluid" id="contenedorformulario">
+        <div class="container">
+          <h1>Registro Cliente</h1>
+          <h5>Ingresa por favor los siguientes datos y serás parte de esta gran familia</h5>
+          <form action="post" class="registrocliente">
+            <div class="item item-1"><input type="email" name="correo" placeholder="ingresa tu correo electrónico" id="correo" autocomplete="username" required></div>
+            <div class="item item-2"><input type="password" name="contrasena" placeholder="escribe una contraseña" id="contrasena" autocomplete="current-password" required></div>
+            <div class="item item-3">
+              <label>
+                <input type="checkbox" id="mostrarcontrasena" value="mostrar" />mostrar contraseña
+              </label>
+            </div>
+            <div class="item item-4"><label for="telefono">Ingresa un numero de telefono válido donde te podamos contactar. Ten presente que será de gran ayuda a la hora de entrega de tu orden.</label></div>
+            <div class="item item-5"><input type="text" placeholder="telefono" id="telefono" required></div>
+            <div class="item item-6"><label for="tipo_documento">Elige tipo de documento:</label></div>
+            <div class="item item-7">
+              <select id="tipo_documento" name="tipo_documento" required>
+                <option value="cedula_ciudadania">Cédula de ciudadanía</option>
+                <option value="cedula_extranjeria">Cédula de extranjería</option>
+              </select>
+            </div>
+            <div class="item item-8"><input type="text" placeholder="Escribe tu numero de documento" id="documento"></div>
+          
+            <div class="item item-9"><input type="text" id="direccion" name="direccion" placeholder="Ingresa tu dirección" required></div>
+            <div class="item item-10"><input type="text" id="ciudad" name="ciudad" placeholder="Ingresa tu ciudad" required></div>
+            <div class="item item-11"><input type="text" id="barrio" name="barrio" placeholder="Ingresa tu barrio o sector" required></div>
+            <div class="item item-12"><textarea id="descripcion" name="descripcion" rows="4" cols="50" placeholder="Si tienes alguna especificacion adicional sobre tu ubicacion puedes dejarla en este espacio"></textarea></div>
+            <div class="item item-13"><input type="submit" value="Crear Cuenta" id="submit"></div>         
+            
+          </form>
+        </div>                  
+      </div>   
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

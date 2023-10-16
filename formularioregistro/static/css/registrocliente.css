@@ -1,0 +1,77 @@
+#contenedorformulario{
+    background:#212529;
+    height: 100vh;
+}
+
+.container{  
+    height: 100vh;
+    background: #212529;
+    color: white;
+}
+
+.registrocliente{
+    display: flex;    
+    flex-direction: column;   
+}
+
+.item{
+    margin: 5px;
+}
+
+#correo{
+    width: 300px;    
+    border-radius: 5px;
+}
+
+#contrasena{
+    width: 300px;
+    border-radius: 5px;
+}
+
+#telefono{
+    width: 200px;
+    border-radius: 5px;
+}
+
+#tipo_documento{
+    width: 200px;
+    border-radius: 5px;
+}
+
+#documento{
+    width: 250px;
+    border-radius: 5px;
+}
+
+#direccion{
+    width: 500px;
+    border-radius: 5px;
+}
+
+#ciudad{
+    width: 200px;
+    border-radius: 5px;
+}
+
+#barrio{
+    width: 200px;
+    border-radius: 5px;
+}
+
+#descripcion{
+    width: 400px;
+    border-radius: 5px;
+}
+
+#submit{
+    width: 200px;
+    border-radius: 5px;
+    color: white;
+    background: #451952;  
+}
+
+/* Agrega esta regla CSS para quitar el borde blanco al hacer clic en los input */
+.registrocliente input:focus, .registrocliente select:focus, .registrocliente textarea:focus {
+    outline: none;
+    
+}
